@@ -1,7 +1,12 @@
 import "./App.css";
+import CellWrap from "./Components/CellWrap";
 
 function App() {
-  return <div className="App">Hey Niteesh</div>;
+  return (
+    <>
+      <CellWrap />
+    </>
+  );
 }
 
 export default App;
