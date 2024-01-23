@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Folder from "./Component/Folder";
+import explorer from "./Data/fileData";
+import useTraverse from "./Hooks/useTraverse";
+import React, { useState } from "react";
 function App() {
+  const [explorerData, setExplorerData] = useState(explorer);
+
+  const { insertNode } = useTraverse();
+
+  const handleInsertNode = (formid, item, isFolder) => {
+    const finalTree = insertNode(explorerData, formid, item, isFolder);
+    setExplorerData(finalTree);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Folder handleInsertNode={handleInsertNode} explorer={explorerData} />
     </div>
   );
 }
