@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #f1f7ff;
+  padding: 6px 0;
+  font-size: 1rem;
+  color: initial;
+  .app-title {
+    font-size: 1.5rem;
+  }
+  .nav-elements {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    li {
+      color: white;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
