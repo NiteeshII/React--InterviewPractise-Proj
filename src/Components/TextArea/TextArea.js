@@ -3,10 +3,7 @@ import "./TextArea.scss";
 
 function TextArea(props) {
   return (
-    <TextArea
-      className="text-area"
-      placeholder=" please place the text here..."
-    />
+    <textarea className="text-area" placeholder="Paste your text here..." />
   );
 }
 

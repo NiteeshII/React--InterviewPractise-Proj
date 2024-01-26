@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./Navbar/Navbar";
 import ResultBox from "./ResultBox/ResultBox";
 import TextArea from "./TextArea/TextArea";
+import BottomResultBox from "./BottomResultBox/BottomResultBox";
+import Footer from "./Footer/Footer";
 
 function TextBox(props) {
   return (
@@ -10,24 +12,10 @@ function TextBox(props) {
       <div className="main-container">
         <ResultBox />
         <TextArea />
-        <div className="main-footer">
-          <div className="resultbox">
-            <span className="box-title">Average Reading Time</span>
-            <span className="box-value">~ 1 minute</span>
-          </div>
-          <div className="resultbox">
-            <span className="box-title">Longest Word</span>
-            <span className="box-value">Structure</span>
-          </div>
-        </div>
+        <BottomResultBox />
       </div>
 
-      <nav className="navbar">
-        <div className="footer-container">
-          <div>Build by Niteeah</div>
-          <span>About US | contct US</span>
-        </div>
-      </nav>
+      <Footer />
     </div>
   );
 }
