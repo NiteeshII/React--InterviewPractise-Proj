@@ -9,12 +9,15 @@ function Navbar() {
           <span className="app-title">Text Analyzer</span>
           <ul className="social-links">
             <li>
-              <a href="" target="_blank">
+              <a href="https://twitter.com/?lang=en" target="_blank">
                 <Twitter />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/niteesh-varma-870b27206/"
+                target="_blank"
+              >
                 <LinkedIn />
               </a>
             </li>

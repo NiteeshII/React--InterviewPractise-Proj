@@ -1,16 +1,18 @@
 import React from "react";
 import "./BottomResult.scss";
+import { useTextData } from "../../Context/useData";
 
 function BottomResultBox(props) {
+  const { updates } = useTextData();
   const resultitems = [
     {
       title: "Average Reading time :",
-      value: "-",
+      value: "~ 1 minute",
     },
 
     {
       title: "Longest Word : ",
-      value: "-",
+      value: updates.longestWord,
     },
   ];
   return (

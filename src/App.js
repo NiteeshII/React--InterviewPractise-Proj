@@ -1,9 +1,12 @@
 import TextBox from "./Components/TextBox";
+import ContextProvider from "./Context/useData";
 
 function App() {
   return (
     <div>
-      <TextBox />
+      <ContextProvider>
+        <TextBox />
+      </ContextProvider>
     </div>
   );
 }

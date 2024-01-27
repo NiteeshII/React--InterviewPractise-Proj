@@ -1,27 +1,29 @@
 import React from "react";
 import "./ResultBox.scss";
+import { useTextData } from "../../Context/useData";
 
 function ResultBox(props) {
+  const { state, updates } = useTextData();
   const resultBar = [
     {
       title: "Words",
-      value: 0,
+      value: state.words,
     },
     {
       title: "Characters",
-      value: 0,
+      value: state.character,
     },
     {
       title: "Sentences",
-      value: 0,
+      value: state.sentense,
     },
     {
       title: "Paragraphs ",
-      value: 0,
+      value: state.paragraphs,
     },
     {
       title: "Pronouns",
-      value: 0,
+      value: updates.pronounCount,
     },
   ];
 
