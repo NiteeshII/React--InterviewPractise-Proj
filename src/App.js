@@ -29,8 +29,6 @@ function App() {
 
   const { password, generatePassowrd, errorMessage } = usePasswordGenerator();
 
-  console.log(password, errorMessage);
-
   const handleChange = (index) => {
     const updatedState = [...checkboxData];
     updatedState[index].state = !updatedState[index].state;
@@ -38,7 +36,7 @@ function App() {
   };
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText("Niteesh@1234");
+    navigator.clipboard.writeText(password);
     setcopied(true);
     setTimeout(() => {
       setcopied(false);
