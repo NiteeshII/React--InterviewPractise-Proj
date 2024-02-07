@@ -1,0 +1,68 @@
+.List-Card {
+  background: #fff;
+  box-shadow: 0 6px 58px rgba(196, 203, 214, 0.103611);
+  border-radius: 24px;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.task-group {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+
+.priority-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-group {
+  width: 100px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.status {
+  background: hsla(217, 9%, 53%, 0.14);
+  border: none;
+  border-radius: 8px;
+  color: #7d8592;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  outline: none;
+  padding: 7px 14px;
+}
+
+.priority {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.high-priority {
+  color: red;
+}
+
+.low-priority {
+  color: green;
+}
+
+.medium-priority {
+  color: orange;
+}
+
+.task-group span:first-child {
+  color: #91929e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}

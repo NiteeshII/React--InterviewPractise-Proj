@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f0f2f5;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TaskList-container {
+  width: 720px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TaskList-wrapper {
+  margin: 20px 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TaskList-title {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.TaskList-title h2 {
+  font-weight: 700;
+  font-size: 36px;
+  color: #0a1629;
+}
+
+.TaskList-title button {
+  background-color: #713fff;
+  border: none;
+  padding: 13px 30px;
+  font-size: 1rem;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(113, 63, 255, 0.25);
 }
