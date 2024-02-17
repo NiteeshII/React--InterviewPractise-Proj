@@ -134,3 +134,66 @@ ul{
 }
 
 --------------------------------------------------------------------------
+
+
+/ Sorting Related/
+
+
+const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+function BubbleSort(arr){
+let temp;
+for(let i=0 ;i < arr.length; i++){
+for(let j=0 ; j < arr.length ; j++){
+if(arr[j] > arr[j+1]){
+temp = arr[j];
+arr[j]= arr[j+1];
+arr[j+1]= temp;
+}
+}
+}
+return arr
+}
+
+ console.log(BubbleSort(numbers)) 
+
+function selectionSort(arr){
+let temp;
+let min;
+for(let i = 0 ; i < arr.length -1 ; i++){
+temp =arr[i];
+min = i;
+for(let j= i+1 ; j< arr.length ; j++){
+if(arr[j] < arr[min]){
+min = j
+}
+}
+arr[i]= arr[min];
+arr[min] = temp
+}
+return arr
+}
+
+ console.log(selectionSort(numbers)) 
+
+
+function InsertionSort(arr){
+let temp;
+let j;
+for(let i = 1 ; i< arr.length ; i++){
+temp =arr[i];
+j=i-1
+while(j>=0 && arr[j] > temp){
+arr[j+1]= arr[j];
+j=j-1
+}
+
+arr[j+1]= temp;
+}
+
+return arr
+}
+
+console.log(InsertionSort(numbers))
+
+----------------------------------------------------------------------
