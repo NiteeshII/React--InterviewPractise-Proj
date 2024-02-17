@@ -76,3 +76,61 @@ return newstr.trim();
 }
 
 console.log(Reverselong('Niteesh varma Gandraju loves you'));
+
+function stocksbuy(arr){
+let least = arr[0];
+let highest= arr[0];
+for(let i = 1 ; i < arr.length ;i++){
+if(arr[i] < least){
+least = arr[i];
+highest = least;
+}
+
+if(arr[i] > highest){
+ highest = arr[i]
+}
+}
+
+return [least , highest]
+}
+
+console.log(stocksbuy([7,1,5,3,6,4]));
+
+--------------------------------------------------------------------
+
+const Throtlling = (fn , delay)=> {
+let flag = true;
+return function(){
+if(flag){
+fn();
+flag = false;
+setTimeout(()=> {
+flag = true;
+}, delay)
+}
+}
+}
+
+const throttle = Throtlling(()=> console.log('niteesh'), 2000);
+const unorder = document.getElementById('keys');
+
+unorder.addEventListener('scroll', ()=> {
+throttle();
+})
+// html Code 
+<uL id="keys">
+<li>key1</li>
+<li>key1</li>
+<li>key1</li>
+<li>key1</li>
+<li>key1</li>
+<li>key1</li>
+<li>key1</li>
+</uL>
+// css
+ul{
+  height: 100px;
+  overflow-y: scroll;
+}
+
+--------------------------------------------------------------------------
