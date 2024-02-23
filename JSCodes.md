@@ -96,6 +96,29 @@ return [least , highest]
 
 console.log(stocksbuy([7,1,5,3,6,4]));
 
+
+function mergesortedArray(arr1, arr2){
+let mergedArray = [];
+let i = 0;
+let j= 0;
+while(i < arr1.length - 1 || j < arr2.length -1){
+if(arr1[i] < arr2[j]){
+mergedArray.push(arr1[i]);
+i++
+}else if(arr1[i] > arr2[j]){
+mergedArray.push(arr2[j]);
+j++
+}else{
+  mergedArray.push(arr1[i], arr2[j]);
+  i++
+  j++
+}
+}
+return mergedArray
+}
+
+console.log(mergesortedArray(a,b))
+
 --------------------------------------------------------------------
 
 const Throtlling = (fn , delay)=> {
@@ -197,3 +220,5 @@ return arr
 console.log(InsertionSort(numbers))
 
 ----------------------------------------------------------------------
+
+
