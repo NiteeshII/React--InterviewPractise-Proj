@@ -114,6 +114,9 @@ j++
   j++
 }
 }
+
+ mergedArray = mergedArray.concat(a.slice(i)).concat(b.slice(j));
+ 
 return mergedArray
 }
 
