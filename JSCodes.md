@@ -77,6 +77,29 @@ return newstr.trim();
 
 console.log(Reverselong('Niteesh varma Gandraju loves you'));
 
+
+const maxsubarray = (arr)=> {
+let sum = arr[0];
+let maxsum = arr[0];
+let i= 0 ;
+let j= 0;
+for(let k =1; k<arr.length;k++){
+sum = sum + arr[k];
+if(arr[k] > sum){
+sum = arr[k];
+i=k
+}
+
+if(sum > maxsum){
+maxsum= sum;
+j=k
+}
+}
+return arr.slice(i,j+1)
+}
+
+console.log(maxsubarray([-2,1,-3,4,-1,2,1,-5,4]))
+
 function stocksbuy(arr){
 let least = arr[0];
 let highest= arr[0];
