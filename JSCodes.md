@@ -57,6 +57,23 @@ return s
 
 console.log('Niteesh'.substring(1), Reverse(string))
 
+
+ const Input = "My name is Bittu Kumar"
+ function camelCasing(input){
+ const arr = input.split(' ');
+ for(let i=0 ; i<arr.length -1 ; i++){
+if(i=== 0 && arr[i].charAt(0).toUpperCase() === input.charAt(0)){
+  arr[i]=  arr[i].charAt(0).toLowerCase() + arr[i].substring(1);
+}else{
+arr[i]= arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
+}
+ }
+ return arr.join(" ")
+ }
+ 
+ console.log(camelCasing(Input));
+ 
+
 function Reverselong(str){
 let s = '';
 let newstr= '';
