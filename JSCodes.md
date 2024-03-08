@@ -72,7 +72,41 @@ arr[i]= arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
  }
  
  console.log(camelCasing(Input));
- 
+
+-------------------------------------------------------------------------------------------------------
+ function convertString(input) {
+    let output = '';
+    let count = [];
+    let s = '';
+    let newstr= [];
+    for (let i = 0; i < input.length; i++) {
+      if (!isNaN(input[i])) {
+      count.push(input[i]);
+    }else{
+        s = s + input[i];   
+    }
+         
+   if(i> 0 && !isNaN(input[i])){
+     newstr.push(s);
+     s=''
+    }else if(i=== input.length - 1){
+     newstr.push(input[i])
+       }            
+   }
+       
+   newstr.forEach((item, index) => {
+  output += newstr[index].repeat(Number(count[index]));
+});
+  
+ return output
+}
+
+// Test the function
+const input = "3ab2b1c5d";
+const output = convertString(input);
+console.log(output); // Output: "abababbbcdddddd"
+
+--------------------------------------------------------------------------------------------------------- 
 
 function Reverselong(str){
 let s = '';
