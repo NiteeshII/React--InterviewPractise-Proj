@@ -74,31 +74,28 @@ arr[i]= arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
  console.log(camelCasing(Input));
 
 -------------------------------------------------------------------------------------------------------
- function convertString(input) {
-    let output = '';
-    let count = [];
-    let s = '';
-    let newstr= [];
-    for (let i = 0; i < input.length; i++) {
-      if (!isNaN(input[i])) {
-      count.push(input[i]);
-    }else{
-        s = s + input[i];   
+function convertString(input) {
+  let output = "";
+  let count = "";
+  let s = "";
+  for (let i = 0; i < input.length; i++) {
+    if (!isNaN(input[i])) {
+      if (s.length !== 0) {
+        output += s.repeat(Number(count));
+        console.log(output, count);
+        s = "";
+      }
+      count = input[i];
+    } else {
+      s = s + input[i];
     }
-         
-   if(i> 0 && !isNaN(input[i])){
-     newstr.push(s);
-     s=''
-    }else if(i=== input.length - 1){
-     newstr.push(input[i])
-       }            
-   }
-       
-   newstr.forEach((item, index) => {
-  output += newstr[index].repeat(Number(count[index]));
-});
-  
- return output
+
+    if (i === input.length - 1) {
+      output += input[i].repeat(Number(count));
+    }
+  }
+
+  return output;
 }
 
 // Test the function
