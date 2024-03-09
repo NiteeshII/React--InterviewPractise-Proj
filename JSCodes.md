@@ -84,8 +84,9 @@ function convertString(input) {
         output += s.repeat(Number(count));
         console.log(output, count);
         s = "";
+        count="";
       }
-      count = input[i];
+      count += input[i];
     } else {
       s = s + input[i];
     }
