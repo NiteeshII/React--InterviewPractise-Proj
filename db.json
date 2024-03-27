@@ -1,0 +1,46 @@
+{
+  "country-list": [
+    {
+      "id": 1,
+      "name": "United States",
+      "img": "country-info/src/Icons/icons8-usa-flag-48.png"
+    },
+    {
+      "id": 2,
+      "name": "United Kingdom",
+      "img": "country-info/src/Icons/icons8-uk-48.png"
+    },
+    {
+      "id": 3,
+      "name": "Germany",
+      "img": "country-info/src/Icons/icons8-germany-48.png"
+    }
+  ],
+
+  "country-data": [
+    {
+      "id": 1,
+      "name": "United States",
+      "status": "Active",
+      "timeseries": [100, 120, 150, 180, 200, 250, 280],
+      "highest": 280,
+      "lowest": 100
+    },
+    {
+      "id": 2,
+      "name": "United Kingdom",
+      "status": "Inactive",
+      "timeseries": [50, 60, 55, 70, 65, 80, 75],
+      "highest": 80,
+      "lowest": 50
+    },
+    {
+      "id": 3,
+      "name": "Germany",
+      "status": "Active",
+      "timeseries": [200, 220, 240, 260, 280, 300, 320],
+      "highest": 320,
+      "lowest": 200
+    }
+  ]
+}

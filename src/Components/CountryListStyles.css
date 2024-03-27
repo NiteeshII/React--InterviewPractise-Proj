@@ -1,0 +1,40 @@
+/* countryListStyles.css */
+
+.country-list-container {
+  position: relative;
+}
+
+.map-icon-background {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure the map icon is behind the table content */
+  opacity: 0.2; /* Adjust opacity as desired */
+}
+
+.country-list-table {
+  width: 80%; /* Adjust table width as needed */
+  margin: 60px auto; /* Center the table horizontally */
+  border: 2px solid #ccc; /* Add border to the table */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+.country-list-table th,
+.country-list-table td {
+  padding: 10px 30px 10px 60px;
+  text-align: center;
+}
+
+.country-list-table th {
+  background-color: #f0f0f0; /* Light background color for header */
+}
+
+.country-list-table tbody tr:hover {
+  background-color: #e0e0e0; /* Light background color on hover */
+}
+
+.country-list-table img {
+  width: 30px; /* Adjust image size as needed */
+  height: 30px;
+}
