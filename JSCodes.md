@@ -1,3 +1,22 @@
+/------------------promise.allSettle() polyfill written as a function------------------------------/
+asyncAdd([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]);
+
+function asyncAdd(arr){
+let sum= 0
+let promise = Promise.resolve();
+arr.forEach((item)=> {
+promise = promise.then(()=> {
+return item.then((res)=> {
+sum+= res;
+}).catch((error)=>  error)
+})
+})
+return promise.then(()=> sum);
+
+}
+
+asyncAdd([Promise.resolve(1), Promise.reject(2), Promise.resolve(3)]).then((x)=> console.log(x))
+
 /--------------------async code execution in a syncronous way---------------------------------------------------/
 
 let promise1= new Promise((res,rej)=>  {
