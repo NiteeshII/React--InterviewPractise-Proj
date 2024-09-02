@@ -1,3 +1,47 @@
+/--------------------async code execution in a syncronous way---------------------------------------------------/
+
+let promise1= new Promise((res,rej)=>  {
+setTimeout(()=> res(1), 1000)
+});
+
+let promise2 = new Promise((res,rej)=>  {
+setTimeout(()=> res(2), 500)
+})
+
+let promise3= new Promise((res,rej)=>  {
+setTimeout(()=> res(3), 100)
+})
+
+/* promise1.then((res)=> {
+ console.log(res);
+ return promise2;
+}).then((res)=> {
+console.log(res);
+return promise3;
+}).then((res)=> {
+console.log(res)
+}) */
+
+
+class collector{
+constructor(){
+this.promise = Promise.resolve()
+}
+
+add(prom){
+this.promise = this.promise.then((res, rej)=> {
+return prom.then((reply)=> console.log(reply));
+});
+return this
+}
+}
+
+const col = new collector();
+
+col.add(promise1).add(promise2).add(promise3)
+
+/---------------------------------------------------------------------------------------------------
+
 const array = [1,1,2,3,4,5,5,6];
 
 function Duplicate(arr){
